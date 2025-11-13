@@ -1,20 +1,31 @@
+import verseHero from '../assets/images/verse/4461ADEF-3034-4F67-805B-5C7BD859C357.jpeg'
+import highlyteHero from '../assets/images/highlyte/IMG_0098.JPG'
+import highlyteGallery1 from '../assets/images/highlyte/IMG_2295.jpg'
+import highlyteGallery2 from '../assets/images/highlyte/IMG_5618.jpg'
+import highlyteGallery3 from '../assets/images/highlyte/IMG_7003.jpg'
+
 export const groups = [
   {
     slug: 'verse',
     name: 'Verse',
+    city: 'Denver, CO',
     type: 'Barbershop Quartet',
-    description:
-      'A precision-focused quartet blending classic technique with modern storytelling and velvet resonance.',
-    tagline: 'Cinematic harmonies with gallery-grade polish.',
-    programming:
-      'Verse leans into lush ballads, inventive tags, and immersive listening salons that feel as curated as a gallery opening.',
-    availability:
-      'Perfect for luxury galas, black-tie stages, and elevated brand collaborations that crave drama and polish.',
-    bullets: [
-      'Signature tight harmonies',
-      '2025 BHS International Quartet Contest – 28th place',
-      '2025 RMD District Champion & Marco Gonzalez Award recipient',
-      'NoVoice Award winner (RMD 2024)',
+    shortDescription: 'A polished, high-level barbershop quartet known for precision, blend, and heartfelt performances.',
+    longDescription:
+      'Verse brings a clean, modern barbershop sound shaped by precision, blend, and genuine connection. Their performances balance strong musicianship with an inviting presence that audiences respond to instantly.',
+    extendedDescription:
+      'Whether singing for local events or competing on the BHS stage, Verse shows up with heart, energy, and a commitment to singing well together.',
+    members: [
+      { name: 'Grant Hamilton', role: 'Tenor' },
+      { name: 'Holly Vose', role: 'Lead' },
+      { name: 'Hunter Adam', role: 'Baritone' },
+      { name: 'John Aragon', role: 'Bass' },
+    ],
+    achievements: [
+      '2025 BHS International Quartet Contest — 28th place',
+      '2025 Rocky Mountain District Champions',
+      'Marco Gonzalez Audience Award',
+      '2024 BHS Next Gen — 12th place',
     ],
     services: [
       {
@@ -30,21 +41,21 @@ export const groups = [
         copy: 'Custom arranging and coaching intensives for advanced vocal ensembles.',
       },
     ],
-    events: [
-      {
-        title: 'Highlyte Holiday Concert',
-        date: 'December 17 · 7:00 PM',
-        location: 'Venue TBA',
-        blurb: 'Verse joins Highlyte for an evening of seasonal music.',
-        link: null,
-      },
-      {
-        title: 'RMD BHS Prelims',
-        date: 'Date TBA',
-        location: 'Cheyenne, Wyoming',
-        blurb: 'Verse will compete at the upcoming RMD BHS preliminary contest.',
-        link: null,
-      },
+    auditionsOpen: false,
+    auditionStatus: 'Closed to auditions',
+    auditionNote: 'Verse is a competitive quartet and is not auditioning new members.',
+    socials: {
+      instagram: 'https://instagram.com/versequartet',
+      facebook: 'https://facebook.com/versequartet',
+      youtube: 'https://www.youtube.com/results?search_query=verse+quartet',
+    },
+    contactEmail: 'bookings@harmonycollective.org',
+    featuredVideo: 'https://www.youtube.com/embed/cIxYbt1IdgY',
+    heroImage: verseHero,
+    gallery: [
+      verseHero,
+      'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
     ],
     palette: {
       bg: '#0c0512',
@@ -60,68 +71,25 @@ export const groups = [
     },
   },
   {
-    slug: 'highlyte',
-    name: 'Highlyte',
-    type: 'Community Chorus',
-    description:
-      'Formed in January 2025, this 24-voice chorus led by director Jaden Nguyen lifts up local voices with inclusive repertoire and bold storytelling.',
-    tagline: 'A communal heartbeat built on uplift and access.',
-    programming:
-      'Highlyte brings large-scale chorus energy to civic events, immersive workshops, and open rehearsals that welcome every singer.',
-    availability:
-      'Ideal for civic celebrations, conference plenaries, and cultural festivals that want impact and accessibility.',
-    bullets: ['24 singers directed by Jaden Nguyen', 'Workshops & open rehearsals', 'Perfect for civic celebrations'],
-    services: [
-      {
-        title: 'Community Showcases',
-        copy: 'Full chorus concerts built around uplifting repertoire and collective energy.',
-      },
-      {
-        title: 'Open Rehearsals',
-        copy: 'Interactive rehearsals and coachings for schools, conferences, and arts partners.',
-      },
-      {
-        title: 'Mass Choir Builds',
-        copy: 'Pop-up choir experiences that culminate in a powerful joint performance.',
-      },
-    ],
-    events: [
-      {
-        title: 'Highlyte Holiday Concert',
-        date: 'December 17 · 7:00 PM',
-        location: 'Venue TBA',
-        blurb: 'Seasonal program directed by Jaden Nguyen with featured guests Verse.',
-        link: null,
-      },
-    ],
-    palette: {
-      bg: '#050505',
-      card: '#0d0d0f',
-      cardAlt: '#15161a',
-      text: '#f5f5f5',
-      muted: '#c8cad5',
-      accent: '#f3c65b',
-      accent2: '#cdbfe5',
-      heroGradient: 'linear-gradient(130deg, #f4c64f, #b7bcd4 55%, #cdbfe5 85%)',
-      overlay: 'rgba(5, 5, 5, 0.55)',
-      panelBorder: 'rgba(255, 255, 255, 0.18)',
-    },
-  },
-  {
     slug: 'counterpoint',
     name: 'Counterpoint',
+    city: 'Denver, CO',
     type: 'Barbershop Quartet',
-    description:
-      'Dynamic innovators bringing choreography, rhythm, and fearless arranging choices.',
-    tagline: 'High-voltage sparks with jaw-drop finales.',
-    programming:
-      'Counterpoint blends vocal percussion textures, bold mashups, and dynamic choreography designed for modern stages.',
-    availability:
-      'Corporate entertainment, festival headliners, and educational residencies that crave a jolt of energy.',
-    bullets: [
-      'Award-winning contest set',
-      'BHS Rising Stars: 2nd (2025), 3rd (2024 & 2023)',
-      '2nd place – BHS International Comedy Contest',
+    shortDescription: 'A vibrant quartet blending skilled musicianship with humor, heart, and unforgettable performances.',
+    longDescription:
+      'Counterpoint is a high-energy barbershop quartet known for expressive singing, strong musicianship, and a natural sense of fun on stage. Their performances blend personality, clarity, and charm, making them audience favorites wherever they sing.',
+    extendedDescription:
+      'Whether competing, performing at community events, or sharing music with friends, Counterpoint brings an infectious spark and a modern take on barbershop harmony.',
+    members: [
+      { name: 'Molly Rymes', role: 'Tenor' },
+      { name: 'Jamie McIntyre', role: 'Lead' },
+      { name: 'Rhianna Sponge', role: 'Baritone' },
+      { name: 'Holly Vose', role: 'Bass' },
+    ],
+    achievements: [
+      'BHS Rising Star — 3rd place (2023 & 2024)',
+      'BHS Rising Star — 2nd place (2025)',
+      'BHS International Comedy Contest — 2nd highest score',
     ],
     services: [
       {
@@ -137,7 +105,22 @@ export const groups = [
         copy: 'Weeklong deep dives in rhythm, arranging, and performance coaching.',
       },
     ],
-    events: [],
+    auditionsOpen: false,
+    auditionStatus: 'Closed to auditions',
+    auditionNote: 'Counterpoint is currently a fixed quartet and not replacing members.',
+    socials: {
+      instagram: 'https://instagram.com/counterpoint4tet',
+      facebook: 'https://facebook.com/counterpoint4tet',
+      youtube: 'https://www.youtube.com/results?search_query=counterpoint+quartet',
+    },
+    contactEmail: 'bookings@harmonycollective.org',
+    featuredVideo: 'https://www.youtube.com/embed/jhqyfrs3To0',
+    heroImage: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
+    ],
     palette: {
       bg: '#021312',
       card: '#062322',
@@ -152,65 +135,79 @@ export const groups = [
     },
   },
   {
-    slug: 'golden-ratio',
-    name: 'Golden Ratio',
-    type: 'Barbershop Quartet',
-    description:
-      'Four voices obsessed with balance, known for luxe textures, cinematic arrangements, and sculpted presentation.',
-    tagline: 'Mathematical beauty meets bespoke curation.',
-    programming:
-      'Golden Ratio excels at bespoke arrangements, immersive listening salons, and collaborations with filmmakers and brands.',
-    availability:
-      'Immersive salons, curated listening rooms, and premium brand experiences that need sophistication.',
-    bullets: [
-      'Immersive listening salons',
-      'Bespoke arrangements',
-      'NoVoice Award winner (RMD 2025)',
+    slug: 'highlyte',
+    name: 'Highlyte',
+    city: 'Littleton, CO',
+    type: 'Community Chorus',
+    shortDescription: 'A growing community chorus built on connection, shared singing, and meaningful musical moments.',
+    longDescription:
+      'Highlyte is a growing community chorus based in Littleton, built on connection, shared singing, and welcoming energy. Formed in January 2025 and led by director Jaden Nguyen, the ensemble brings people together through weekly rehearsals and meaningful local performances.',
+    extendedDescription:
+      'Highlyte has quickly become part of the community through events like Highlyte NightLyfe, performances for organizations such as Bridging Hope, and their annual holiday concert featuring guest artists from across the Collective.',
+    members: [],
+    achievements: [
+      'Hosted the inaugural Highlyte NightLyfe community concert',
+      'Performed for Bridging Hope',
+      'Holiday collaboration with Verse (2025)',
     ],
     services: [
       {
-        title: 'Listening Salons',
-        copy: 'Seated, candlelit concerts highlighting resonance and story arcs.',
+        title: 'Community Showcases',
+        copy: 'Full chorus concerts built around uplifting repertoire and collective energy.',
       },
       {
-        title: 'Custom Scores',
-        copy: 'Original vocal scoring for campaigns, films, and art installations.',
+        title: 'Open Rehearsals',
+        copy: 'Interactive rehearsals and coachings for schools, conferences, and arts partners.',
       },
       {
-        title: 'Luxury Events',
-        copy: 'Curated hospitality experiences for museums, resorts, and tastemaker gatherings.',
+        title: 'Mass Choir Builds',
+        copy: 'Pop-up choir experiences that culminate in a powerful joint performance.',
       },
     ],
-    events: [],
+    auditionsOpen: true,
+    auditionStatus: 'Auditions open year-round',
+    auditionNote:
+      'Attend three rehearsals, receive personalized feedback, and join when the fit feels right. Sign up via the Google Form.',
+    auditionLink: 'https://forms.gle/YmyRcVhWfwUniu728',
+    socials: {
+      instagram: 'https://instagram.com/highlyte.vocals',
+      facebook: 'https://facebook.com/highlyte.vocals',
+      youtube: 'https://www.youtube.com/results?search_query=highlyte+chorus',
+    },
+    contactEmail: 'sing@highlytevoices.org',
+    featuredVideo: 'https://www.youtube.com/embed/8ZcmTl_1ER8',
+    heroImage: highlyteHero,
+    gallery: [highlyteHero, highlyteGallery1, highlyteGallery2, highlyteGallery3],
     palette: {
-      bg: '#0f0a03',
-      card: '#1b1307',
-      cardAlt: '#261a09',
-      text: '#fff9ed',
-      muted: '#f0debf',
-      accent: '#f5c66d',
-      accent2: '#ffe3a8',
-      heroGradient: 'linear-gradient(130deg, #3a2508, #f5c66d 55%, #ffe3a8)',
-      overlay: 'rgba(10, 5, 0, 0.55)',
-      panelBorder: 'rgba(245, 198, 109, 0.35)',
+      bg: '#050505',
+      card: '#0d0d0f',
+      cardAlt: '#15161a',
+      text: '#f5f5f5',
+      muted: '#c8cad5',
+      accent: '#f3c65b',
+      accent2: '#cdbfe5',
+      heroGradient: 'linear-gradient(130deg, #f4c64f, #b7bcd4 55%, #cdbfe5 85%)',
+      overlay: 'rgba(5, 5, 5, 0.55)',
+      panelBorder: 'rgba(255, 255, 255, 0.18)',
     },
   },
   {
     slug: 'out-of-range',
     name: 'Out of Range',
+    city: 'Golden, CO',
     type: 'Barbershop Quartet',
-    description:
-      'A fearless quartet mixing humor, inventive arranging, and interactive crowd moments.',
-    tagline: 'Playful energy with fearless tags.',
-    programming:
-      'Out of Range thrives on mashups, comedic bits, and youth outreach programs that invite the audience into the show.',
-    availability:
-      'Festival favorites, interactive workshops, and youth outreach where laughter and learning go hand-in-hand.',
-    bullets: [
-      'Festival favorites',
-      'Interactive workshops',
-      'Preparing for BHS Next Gen International contest',
+    shortDescription: 'A newly formed quartet with fresh energy, strong blend, and a growing presence in the barbershop contest scene.',
+    longDescription:
+      'Out of Range is a newly formed Colorado barbershop quartet bringing fresh energy, tight harmony, and steady growth to the contest stage. Founded in August 2025, they are preparing for the 2026 BHS Next Gen contest and building a sound grounded in blend, connection, and teamwork.',
+    extendedDescription:
+      'Formed in August 2025, the quartet is prepping for the 2026 BHS Next Gen contest. They are ideal for festivals, school residencies, and hybrid concerts where laughter is welcome.',
+    members: [
+      { name: 'Molly Rymes', role: 'Tenor' },
+      { name: 'Holly Vose', role: 'Lead' },
+      { name: 'Hunter Adam', role: 'Baritone' },
+      { name: 'Alex Kaminer', role: 'Bass' },
     ],
+    achievements: ['Preparing for 2026 BHS Next Gen International Contest'],
     services: [
       {
         title: 'Festival Features',
@@ -225,7 +222,18 @@ export const groups = [
         copy: 'School-day performances and mentorship programs introducing barbershop.',
       },
     ],
-    events: [],
+    auditionsOpen: false,
+    auditionStatus: 'Closed to auditions',
+    auditionNote: 'Out of Range is focused on contest preparation with the founding members.',
+    socials: {},
+    contactEmail: 'bookings@harmonycollective.org',
+    featuredVideo: 'https://www.youtube.com/embed/lp-EO5I60KA',
+    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80',
+    ],
     palette: {
       bg: '#1b050d',
       card: '#260712',
@@ -237,6 +245,62 @@ export const groups = [
       heroGradient: 'linear-gradient(130deg, #2b000d, #6a1b2d 55%, #c75a76)',
       overlay: 'rgba(10, 0, 3, 0.55)',
       panelBorder: 'rgba(255, 175, 196, 0.28)',
+    },
+  },
+  {
+    slug: 'golden-ratio',
+    name: 'Golden Ratio',
+    city: 'Golden, CO',
+    type: 'Barbershop Quartet',
+    shortDescription: 'A young quartet with tight harmony, heart, and a growing competitive spirit.',
+    longDescription:
+      'Golden Ratio is a young barbershop quartet bringing fresh harmony, enthusiasm, and heart to the Rocky Mountain District. Since forming in August 2025, they’ve built strong musical chemistry and earned the district’s Novice Quartet title.',
+    extendedDescription:
+      'Formed in August 2025, the quartet won the Rocky Mountain District Novice award and continues to lean into high-design experiences that feel as refined as their chords.',
+    members: [
+      { name: 'Molly Rymes', role: 'Tenor' },
+      { name: 'Georgia Brooks', role: 'Lead' },
+      { name: 'Hunter Adam', role: 'Baritone' },
+      { name: 'Micah Zumtobel', role: 'Bass' },
+    ],
+    achievements: ['2025 Rocky Mountain District Novice Quartet Champions'],
+    services: [
+      {
+        title: 'Listening Salons',
+        copy: 'Seated, candlelit concerts highlighting resonance and story arcs.',
+      },
+      {
+        title: 'Custom Scores',
+        copy: 'Original vocal scoring for campaigns, films, and art installations.',
+      },
+      {
+        title: 'Luxury Events',
+        copy: 'Curated hospitality experiences for museums, resorts, and tastemaker gatherings.',
+      },
+    ],
+    auditionsOpen: false,
+    auditionStatus: 'Closed to auditions',
+    auditionNote: 'Golden Ratio is currently a set ensemble with its founding members.',
+    socials: {},
+    contactEmail: 'bookings@harmonycollective.org',
+    featuredVideo: 'https://www.youtube.com/embed/1gCulUDvALM',
+    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80',
+    ],
+    palette: {
+      bg: '#0f0a03',
+      card: '#1b1307',
+      cardAlt: '#261a09',
+      text: '#fff9ed',
+      muted: '#f0debf',
+      accent: '#f5c66d',
+      accent2: '#ffe3a8',
+      heroGradient: 'linear-gradient(130deg, #3a2508, #f5c66d 55%, #ffe3a8)',
+      overlay: 'rgba(10, 5, 0, 0.55)',
+      panelBorder: 'rgba(245, 198, 109, 0.35)',
     },
   },
 ]

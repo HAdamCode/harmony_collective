@@ -1,0 +1,75 @@
+import PageHero from '../components/PageHero'
+import { groups } from '../data/groups'
+
+export default function Contact() {
+  return (
+    <div className="page">
+      <PageHero
+        eyebrow="Contact"
+        title="We’d love to hear from you."
+        subtitle="Send a message to the Harmony Collective team or connect with an ensemble below."
+        backgroundImage="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?auto=format&fit=crop&w=1600&q=80"
+      />
+
+      <section className="section">
+        <div className="section__header">
+          <h2>General inquiries</h2>
+          <p>We’ll get back to you as soon as we can.</p>
+        </div>
+        <form
+          className="contact-form"
+          onSubmit={(event) => {
+            event.preventDefault()
+            alert('Thank you! We will be in touch shortly.')
+          }}
+        >
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="How can we help?" />
+          </label>
+          <button className="btn btn--primary" type="submit">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      <section className="section section--alt">
+        <div className="section__header">
+          <h2>Group contacts</h2>
+          <p>Email a director directly or follow along on socials.</p>
+        </div>
+        <div className="card-grid contact-cards">
+          {groups.map((group) => (
+            <article className="contact-card" key={group.slug}>
+              <div className="contact-card__image" style={{ backgroundImage: `url(${group.heroImage})` }} />
+              <div className="contact-card__body">
+                <h3>{group.name}</h3>
+                <p>{group.type}</p>
+                <a href={`mailto:${group.contactEmail}`}>{group.contactEmail}</a>
+                {group.socials && (
+                  <ul className="social-list">
+                    {Object.entries(group.socials).map(([network, url]) => (
+                      <li key={network}>
+                        <a href={url} target="_blank" rel="noreferrer">
+                          {network}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  )
+}

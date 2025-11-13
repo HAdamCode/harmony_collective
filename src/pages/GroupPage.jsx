@@ -1,24 +1,18 @@
-import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { groups } from '../data/groups'
 
 export default function GroupPage() {
   const { slug } = useParams()
-  const group = groups.find((g) => g.slug === slug)
-  const currentYear = useMemo(() => new Date().getFullYear(), [])
+  const group = groups.find((item) => item.slug === slug)
 
   if (!group) {
     return (
-      <div className="site-wrapper">
-        <main className="section">
-          <div className="section__header">
-            <h2>That ensemble could not be found.</h2>
-            <p>Please head back to the main Harmony Collective site to discover our current groups.</p>
-          </div>
-          <Link className="btn btn--primary" to="/">
-            ← Back to Harmony Collective
-          </Link>
-        </main>
+      <div className="page section">
+        <h1>Ensemble not found</h1>
+        <p>The group you are looking for has moved. Please return to the full roster.</p>
+        <Link className="btn btn--primary" to="/groups">
+          Back to Groups
+        </Link>
       </div>
     )
   }
@@ -32,141 +26,134 @@ export default function GroupPage() {
     '--accent': group.palette.accent,
     '--accent-2': group.palette.accent2,
     '--panel-border': group.palette.panelBorder,
-    '--hero-bg': group.palette.heroGradient,
-    '--hero-overlay': group.palette.overlay,
   }
 
   return (
-    <div className="site-wrapper" style={themeVars}>
-      <header className="hero">
-        <nav className="nav nav--group">
-          <Link className="logo" to="/">
-            Harmony Collective
-          </Link>
-          <Link className="btn btn--ghost" to="/">
-            ← Main Site
-          </Link>
-        </nav>
-        <div className="hero__content">
-          <p className="eyebrow">{group.type}</p>
+    <div className="page group-page" style={themeVars}>
+      <section className="group-hero" style={{ backgroundImage: `linear-gradient(${group.palette.overlay}, ${group.palette.overlay}), url(${group.heroImage})` }}>
+        <div className="group-hero__content">
+          <p className="eyebrow">
+            {group.type} · {group.city}
+          </p>
           <h1>{group.name}</h1>
-          <p className="lead">{group.description}</p>
-          <div className="hero__actions">
-            <a className="btn btn--primary" href="#contact">
+          <p className="lead">{group.shortDescription}</p>
+          {group.auditionsOpen && <p className="group-card__status">{group.auditionStatus}</p>}
+          <div className="hero-actions">
+            <Link className="btn btn--primary" to="/book-us">
               Book {group.name}
-            </a>
-            <Link className="btn btn--ghost" to="/">
-              View all groups
+            </Link>
+            <Link className="btn btn--ghost" to="/groups">
+              View All Groups
             </Link>
           </div>
-        </div>
-      </header>
-
-      <main>
-        <section className="section">
-          <div className="section__header">
-            <h2>{group.tagline}</h2>
-            <p>{group.programming}</p>
-          </div>
-          <div className="group-page__grid">
-            <article className="card">
-              <h3>Highlights</h3>
-              <ul>
-                {group.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </article>
-            <article className="card">
-              <h3>Ideal Settings</h3>
-              <p>{group.availability}</p>
-            </article>
-          </div>
-        </section>
-
-        {group.events?.length > 0 && (
-          <section className="section" id="events">
-            <div className="section__header">
-              <p className="eyebrow">Upcoming Events</p>
-              <h2>Where to experience {group.name} next</h2>
-              <p>Fans can grab tickets below, and presenters can see available routing opportunities.</p>
-            </div>
-            <div className="events-list">
-              {group.events.map((event) => (
-                <article className="event-card" key={event.title}>
-                  <div className="event-card__header">
-                    <p className="event-card__date">{event.date}</p>
-                  </div>
-                  <h3>{event.title}</h3>
-                  {event.location && <p className="event-card__location">{event.location}</p>}
-                  {event.blurb && <p>{event.blurb}</p>}
-                  {event.link ? (
-                    <a className="btn btn--ghost btn--small" href={event.link}>
-                      Tickets &amp; info
-                    </a>
-                  ) : null}
-                </article>
+          {group.socials && (
+            <ul className="social-list">
+              {Object.entries(group.socials).map(([network, url]) => (
+                <li key={network}>
+                  <a href={url} target="_blank" rel="noreferrer">
+                    {network}
+                  </a>
+                </li>
               ))}
-            </div>
-          </section>
-        )}
+            </ul>
+          )}
+        </div>
+      </section>
 
+      <section className="section">
+        <div className="group-detail-grid">
+          <article className="card">
+            <h2>About</h2>
+            <p>{group.longDescription}</p>
+            <p>{group.extendedDescription}</p>
+          </article>
+          <article className="card">
+            <h2>Highlights</h2>
+            <ul>
+              {group.achievements.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      {group.members.length > 0 && (
         <section className="section section--alt">
           <div className="section__header">
-            <p className="eyebrow">Offerings</p>
-            <h2>Bring {group.name} to your event</h2>
+            <h2>Members</h2>
           </div>
-          <div className="services">
-            {group.services.map((service) => (
-              <article className="service" key={service.title}>
-                <h3>{service.title}</h3>
-                <p>{service.copy}</p>
-              </article>
+          <ul className="members-list">
+            {group.members.map((member) => (
+              <li key={member.name}>
+                <strong>{member.name}</strong>
+                <span>{member.role}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
-      </main>
+      )}
 
-      <footer className="footer" id="contact">
-        <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Plan a {group.name} experience.</h2>
-          <p>
-            Email <a href="mailto:hello@harmonycollective.com">hello@harmonycollective.com</a> or
-            call <a href="tel:+15551234567">(555) 123-4567</a>.
-          </p>
-          <p>Based in Nashville · Booking worldwide</p>
+      <section className="section">
+        <div className="section__header">
+          <h2>Offerings</h2>
+          <p>We share acapella music at events of all kinds.</p>
         </div>
-        <form
-          className="contact-form"
-          name="contact"
-          onSubmit={(event) => {
-            event.preventDefault()
-            alert(`Thanks for reaching out to ${group.name}! We will be in touch soon.`)
-          }}
-        >
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your Name" required />
-          </label>
-          <label>
-            Organization
-            <input type="text" name="org" placeholder="Company / Presenter" />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="you@example.com" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="4" placeholder={`Tell us about your idea for ${group.name}`} />
-          </label>
-          <button className="btn btn--primary" type="submit">
-            Send inquiry
-          </button>
-        </form>
-        <p className="footer__legal">© {currentYear} Harmony Collective. All rights reserved.</p>
-      </footer>
+        <div className="card-grid">
+          <article className="card">
+            <h3>Spotlight Sets</h3>
+            <p>Short, polished performances perfect for concerts, festivals, and community stages.</p>
+          </article>
+          <article className="card">
+            <h3>Intimate Performances</h3>
+            <p>Cozy, close-up sets for living rooms, park gatherings, gallery nights, and small local events.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section section--alt">
+        <div className="section__header">
+          <h2>Watch & listen</h2>
+        </div>
+        <div className="video-embed">
+          <iframe
+            title={`${group.name} highlight video`}
+            src={group.featuredVideo}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section__header">
+          <h2>Gallery</h2>
+        </div>
+        <div className="gallery-grid">
+          {group.gallery.map((image) => (
+            <div className="gallery-grid__item" key={image} style={{ backgroundImage: `url(${image})` }} />
+          ))}
+        </div>
+      </section>
+
+      {group.auditionsOpen && group.auditionNote && (
+        <section className="section section--cta audition-cta">
+          <div>
+            <h2>Audition status</h2>
+            <p>{group.auditionNote}</p>
+          </div>
+          {group.auditionLink ? (
+            <a className="btn btn--primary" href={group.auditionLink} target="_blank" rel="noreferrer">
+              Audition
+            </a>
+          ) : (
+            <Link className="btn btn--ghost" to="/join">
+              View Join Details
+            </Link>
+          )}
+        </section>
+      )}
     </div>
   )
 }
