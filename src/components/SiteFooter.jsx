@@ -10,12 +10,6 @@ export default function SiteFooter() {
         <div>
           <p className="eyebrow">Contact</p>
           <h2>Harmony. Community. Acapella.</h2>
-          <p>
-            Email{' '}
-            <a href="mailto:hello@harmonycollective.org" rel="noreferrer">
-              hello@harmonycollective.org
-            </a>
-          </p>
           <p>Call <a href="tel:+17193221809">(719) 322-1809</a></p>
           <p>Denver · Littleton · Golden, Colorado</p>
         </div>

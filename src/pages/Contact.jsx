@@ -44,7 +44,7 @@ export default function Contact() {
       <section className="section section--alt">
         <div className="section__header">
           <h2>Group contacts</h2>
-          <p>Email a director directly or follow along on socials.</p>
+          <p>Email available directors directly or connect with ensembles via socials.</p>
         </div>
         <div className="card-grid contact-cards">
           {groups.map((group) => (
@@ -53,7 +53,11 @@ export default function Contact() {
               <div className="contact-card__body">
                 <h3>{group.name}</h3>
                 <p>{group.type}</p>
-                <a href={`mailto:${group.contactEmail}`}>{group.contactEmail}</a>
+                {group.contactEmail ? (
+                  <a href={`mailto:${group.contactEmail}`}>{group.contactEmail}</a>
+                ) : (
+                  <p className="contact-card__note">Use social links for booking and updates.</p>
+                )}
                 {group.socials && (
                   <ul className="social-list">
                     {Object.entries(group.socials).map(([network, url]) => (
