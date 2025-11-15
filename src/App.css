@@ -375,6 +375,7 @@
 
 .group-overview-grid {
   gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
 }
 
 .group-overview-card {
