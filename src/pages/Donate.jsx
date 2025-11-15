@@ -26,9 +26,13 @@ const impactAreas = [
 ]
 
 const paymentOptions = [
-  { label: 'Venmo', value: '@HarmonyCollective' },
-  { label: 'PayPal', value: 'hello@harmonycollective.org' },
-  { label: 'Zelle', value: 'finance@harmonycollective.org' },
+  { label: 'Venmo', value: '@harmonycollectivevocals' },
+  {
+    label: 'PayPal',
+    value: 'Give securely via PayPal',
+    link: 'https://www.paypal.com/ncp/payment/9BLT4QAGX335J',
+    linkLabel: 'Open PayPal',
+  },
 ]
 
 export default function Donate() {
@@ -80,6 +84,11 @@ export default function Donate() {
             <article className="card" key={option.label}>
               <h3>{option.label}</h3>
               <p>{option.value}</p>
+              {option.link && (
+                <a className="btn btn--ghost btn--small" href={option.link} target="_blank" rel="noreferrer">
+                  {option.linkLabel || `Give via ${option.label}`}
+                </a>
+              )}
             </article>
           ))}
         </div>
