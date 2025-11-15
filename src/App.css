@@ -1,13 +1,14 @@
 :root {
-  --bg: #05070f;
-  --card: rgba(14, 16, 27, 0.85);
-  --card-alt: rgba(9, 11, 20, 0.9);
-  --text: #f6f7fb;
-  --muted: #b2b7d3;
+  --bg: #f4f5fb;
+  --card: #ffffff;
+  --card-alt: #f7f9ff;
+  --text: #0f172a;
+  --muted: #5b6378;
   --accent: #f7b733;
   --accent-2: #4ac1f7;
-  --gradient: linear-gradient(135deg, #f7b733, #f7797d 35%, #4ac1f7 75%);
-  --shadow: 0 20px 60px rgba(2, 4, 12, 0.45);
+  --gradient: linear-gradient(135deg, #ffe6a7, #f7a1c4 45%, #9ad6ff 85%);
+  --shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+  --border: rgba(15, 23, 42, 0.08);
 }
 
 .site-shell {
@@ -33,7 +34,7 @@
   height: auto;
   padding: 0.5rem 1rem;
   background: var(--accent);
-  color: #05070f;
+  color: #0f172a;
   border-radius: 999px;
   margin: 0.5rem;
 }
@@ -42,9 +43,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(5, 7, 15, 0.92);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
 .site-header__inner {
@@ -123,6 +125,32 @@
   width: 100%;
 }
 
+.group-page {
+  background: var(--bg);
+  color: var(--text);
+  border-radius: clamp(1.5rem, 3vw, 3rem);
+  box-shadow: 0 35px 80px rgba(4, 7, 14, 0.55);
+  overflow: hidden;
+}
+
+.group-page .section {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.group-page .section--alt {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: none;
+}
+
+.group-page .section__header h2,
+.group-page .section__header p,
+.group-page p,
+.group-page li {
+  color: var(--text);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -140,7 +168,9 @@
 }
 
 .section--alt {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
 }
 
 .section__header {
@@ -159,13 +189,13 @@
 .page-hero {
   padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 4vw, 5rem);
   background: var(--gradient);
-  color: #05070f;
+  color: var(--text);
 }
 
 .page-hero--image {
   background-size: cover;
   background-position: center;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .page-hero__content {
@@ -185,6 +215,20 @@
   margin-top: 1.5rem;
 }
 
+.group-hero .btn--ghost {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.group-hero .btn--ghost:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.group-hero .btn--primary {
+  color: #0f172a;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -200,11 +244,11 @@
 
 .btn--primary {
   background: var(--accent);
-  color: #05070f;
+  color: #0f172a;
 }
 
 .btn--ghost {
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.2);
   color: var(--text);
   background: transparent;
 }
@@ -222,7 +266,7 @@
   background: var(--card);
   border-radius: 1.25rem;
   padding: 1.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
@@ -243,7 +287,7 @@
   border-radius: 1.5rem;
   padding: 2rem;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
 }
 
 .group-card {
@@ -258,10 +302,10 @@
   justify-content: center;
   padding: 0.75rem 1.25rem;
   border-radius: 0.85rem;
-  background: rgba(5, 7, 15, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--border);
   max-width: 180px;
-  box-shadow: 0 15px 35px rgba(2, 4, 12, 0.4);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
 }
 
 .group-card__logo img {
@@ -301,7 +345,7 @@
   background: var(--card-alt);
   border-radius: 1.25rem;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -367,9 +411,9 @@
   flex: 0 0 auto;
   padding: 0.75rem 1.25rem;
   border-radius: 1rem;
-  background: rgba(5, 7, 15, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(247, 183, 51, 0.35);
-  box-shadow: 0 20px 40px rgba(3, 5, 12, 0.45);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
   max-width: 200px;
 }
 
@@ -430,7 +474,7 @@
   box-shadow: var(--shadow);
   text-decoration: none;
   color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   transition: transform 0.2s, border-color 0.2s;
 }
 
@@ -488,6 +532,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  color: #ffffff;
 }
 
 .group-hero::after {
@@ -501,6 +546,14 @@
   position: relative;
   z-index: 1;
   max-width: 720px;
+}
+
+.group-hero__content h1,
+.group-hero__content p,
+.group-hero__content .eyebrow,
+.group-hero__content .group-card__status {
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
 }
 
 .group-hero__logo {
@@ -543,7 +596,7 @@
   background: var(--card);
   border-radius: 1rem;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -578,10 +631,11 @@
   bottom: 0.5rem;
   left: 0.75rem;
   right: 0.75rem;
-  background: rgba(5, 6, 12, 0.65);
+  background: rgba(15, 23, 42, 0.55);
   padding: 0.35rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.85rem;
+  color: #ffffff;
 }
 
 .gallery-grid--wide {
@@ -598,7 +652,7 @@
   background: var(--card-alt);
   border-radius: 1.5rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
@@ -626,8 +680,8 @@ label {
 input,
 textarea,
 select {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 0.9rem 1rem;
   color: var(--text);
@@ -671,8 +725,8 @@ textarea {
 
 .site-footer {
   padding: 4rem clamp(1.5rem, 4vw, 4rem);
-  background: #03040a;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #e7eaf2;
+  border-top: 1px solid var(--border);
 }
 
 .site-footer__grid {
@@ -698,7 +752,7 @@ textarea {
 
 .footer__legal {
   margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border);
   padding-top: 1.5rem;
   color: var(--muted);
 }
@@ -716,7 +770,7 @@ textarea {
   font-size: 0.9rem;
   color: var(--text);
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(15, 23, 42, 0.15);
   border-radius: 999px;
   padding: 0.35rem 0.85rem;
   display: inline-flex;
@@ -733,6 +787,16 @@ textarea {
 .social-list a:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.group-hero .social-list a {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.group-hero .social-list a:hover {
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .contact-card {
@@ -771,12 +835,14 @@ textarea {
   background: var(--card);
   border-radius: 1.5rem;
   overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .spotlight__media {
   background-size: cover;
   background-position: center;
   min-height: 280px;
+  position: relative;
 }
 
 .spotlight__body {
@@ -784,6 +850,42 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.spotlight__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5));
+}
+
+.spotlight__body h3,
+.spotlight__body p,
+.spotlight__body .eyebrow {
+  color: var(--text);
+}
+
+.group-page .card,
+.group-page .contact-card,
+.group-page .event-card,
+.group-page .members-list li {
+  background: color-mix(in srgb, var(--card) 92%, rgba(255, 255, 255, 0.05));
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: 1.75rem;
+  border: 1px solid var(--panel-border, rgba(255, 255, 255, 0.2));
+  box-shadow: 0 25px 45px rgba(3, 5, 12, 0.35);
+}
+
+.group-page .card h2,
+.group-page .card h3,
+.group-page .card p:first-of-type {
+  margin-top: 0;
+}
+
+.group-page .card p,
+.group-page .card li,
+.group-page .members-list li {
+  line-height: 1.65;
 }
 
 .mini-gallery {
@@ -838,10 +940,10 @@ textarea {
     top: 100%;
     right: 1rem;
     flex-direction: column;
-    background: rgba(5, 7, 15, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     padding: 1.5rem;
     border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
