@@ -9,7 +9,7 @@ const impactAreas = [
   },
   {
     title: 'Rehearsal space',
-    copy: 'Donations keep rehearsals accessible and consistent for our singers.',
+    copy: 'Your support keeps rehearsals accessible and consistent for our singers.',
   },
   {
     title: 'Sound equipment',
@@ -39,9 +39,9 @@ export default function Donate() {
   return (
     <div className="page">
       <PageHero
-        eyebrow="Donate"
+        eyebrow="Support the Collective"
         title="Fuel warm, community-first music."
-        subtitle="Your gift helps cover rehearsal spaces, purchase music, support equipment needs, and make performances and competitions possible for our groups."
+        subtitle="Your gift helps cover rehearsal spaces, purchase music, support equipment needs, and make performances and competitions possible for our groups. Harmony Collective is not a 501(c)(3), so contributions are not tax-deductible."
         backgroundImage={donateHero}
       />
 
@@ -62,7 +62,7 @@ export default function Donate() {
       <section className="section section--alt">
         <div className="section__header">
           <h2>How gifts are allocated</h2>
-          <p>Specify a group in the payment note to direct funds. Without a designation, donations are shared across the Collective.</p>
+          <p>Specify a group in the payment note to direct funds. Without a designation, contributions are shared across the Collective.</p>
         </div>
         <ul className="impact-list">
           {impactAreas.map((area) => (
@@ -92,11 +92,7 @@ export default function Donate() {
             </article>
           ))}
         </div>
-        <article className="card donor-letter">
-          <h3>Donor Letter</h3>
-          <p>Prefer to send a note with your gift? We’re happy to receive it at:</p>
-          <a href="mailto:give@harmonycollective.org">give@harmonycollective.org</a>
-        </article>
+        <p className="support-note">Harmony Collective is not a registered charity; gifts made through these platforms are not tax-deductible.</p>
       </section>
     </div>
   )

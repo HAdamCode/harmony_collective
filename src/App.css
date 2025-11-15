@@ -649,8 +649,10 @@ textarea {
   gap: 1rem;
 }
 
-.donor-letter {
-  margin-top: 1.25rem;
+.support-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .site-footer {

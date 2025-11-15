@@ -6,6 +6,6 @@ export const primaryNav = [
   { label: 'Media', path: '/media' },
   { label: 'Book Us', path: '/book-us' },
   { label: 'Join', path: '/join' },
-  { label: 'Donate', path: '/donate' },
+  { label: 'Support', path: '/donate' },
   { label: 'Contact', path: '/contact' },
 ]

@@ -52,7 +52,7 @@ export const blogPosts = [
     category: 'Announcements',
     image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
     excerpt:
-      'A look at how your donations translated into open rehearsals, clinics, and performances across Denver, Littleton, and Golden.',
+      'A look at how your support translated into open rehearsals, clinics, and performances across Denver, Littleton, and Golden.',
     content: [
       '42 public performances, 18 workshops, and 11 collaborations with nonprofits defined our year.',
       'More than 120 singers participated in Harmony Collective programming, with Highlyte adding 14 new members.',

@@ -157,10 +157,10 @@ export default function Home() {
       <section className="section section--cta donate-cta">
         <div>
           <h2>Support our voices.</h2>
-          <p>Your donation underwrites music, rehearsal space, and scholarships across the Collective.</p>
+          <p>Your support underwrites music, rehearsal space, and scholarships across the Collective.</p>
         </div>
         <Link className="btn btn--primary" to="/donate">
-          Donate Today
+          Support the Collective
         </Link>
       </section>
 
