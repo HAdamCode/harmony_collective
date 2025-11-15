@@ -1,6 +1,5 @@
 import PageHero from '../components/PageHero'
 import { upcomingEvents } from '../data/events'
-import { pastEvents } from '../data/pastEvents'
 import performancesHero from '../assets/images/verse/performances.jpg'
 
 export default function Performances() {
@@ -42,26 +41,6 @@ export default function Performances() {
         </div>
       </section>
 
-      <section className="section section--alt">
-        <div className="section__header">
-          <h2>Past Highlights</h2>
-          <p>These events showcase the range of Harmony Collective programming.</p>
-        </div>
-        <div className="card-grid past-events">
-          {pastEvents.map((event) => (
-            <article className="past-event-card" key={event.title}>
-              <div className="past-event-card__image" style={{ backgroundImage: `url(${event.image})` }} />
-              <div className="past-event-card__body">
-                <h3>{event.title}</h3>
-                <p className="past-event-card__meta">
-                  {event.date} · {event.location}
-                </p>
-                <p>{event.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
     </div>
   )
 }
