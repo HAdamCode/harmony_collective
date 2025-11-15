@@ -1,7 +1,8 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import PageHero from '../components/PageHero'
 import { groups } from '../data/groups'
 import bookHero from '../assets/images/book.JPG'
+import { sendEmail } from '../utils/sendEmail'
 
 const bookingSteps = [
   'Share a bit about your event: when it is, where it is, and the kind of atmosphere you want.',
@@ -17,6 +18,41 @@ export default function BookUs() {
     ],
     [],
   )
+
+  const [status, setStatus] = useState('idle')
+  const [feedback, setFeedback] = useState('')
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const payload = {
+      formName: 'booking',
+      name: formData.get('name') || '',
+      email: formData.get('email') || '',
+      phone: formData.get('phone') || '',
+      organization: formData.get('organization') || '',
+      date: formData.get('date') || '',
+      location: formData.get('location') || '',
+      eventType: formData.get('eventType') || '',
+      group: formData.get('group') || '',
+      message: formData.get('message') || '',
+    }
+
+    setStatus('submitting')
+    setFeedback('')
+
+    try {
+      await sendEmail(payload)
+      form.reset()
+      setStatus('success')
+      setFeedback('Thanks for reaching out! Our team will follow up shortly.')
+    } catch (error) {
+      console.error(error)
+      setStatus('error')
+      setFeedback(error.message)
+    }
+  }
 
   return (
     <div className="page">
@@ -45,13 +81,7 @@ export default function BookUs() {
           <h2>Booking form</h2>
           <p>Tell us about your event and we will respond with availability, pricing, and next steps.</p>
         </div>
-        <form
-          className="contact-form booking-form"
-          onSubmit={(event) => {
-            event.preventDefault()
-            alert('Thanks for reaching out! Our team will follow up shortly.')
-          }}
-        >
+        <form className="contact-form booking-form" onSubmit={handleSubmit}>
           <label>
             Name
             <input type="text" name="name" required placeholder="Your full name" />
@@ -94,9 +124,19 @@ export default function BookUs() {
             Message
             <textarea name="message" rows="4" placeholder="Event goals, audience size, tech needs" />
           </label>
-          <button className="btn btn--primary" type="submit">
-            Submit Inquiry
+          <button className="btn btn--primary" type="submit" disabled={status === 'submitting'}>
+            {status === 'submitting' ? 'Sending…' : 'Submit Inquiry'}
           </button>
+          {status === 'success' && (
+            <p className="form-status form-status--success" role="status" aria-live="polite">
+              {feedback}
+            </p>
+          )}
+          {status === 'error' && (
+            <p className="form-status form-status--error" role="status" aria-live="polite">
+              {feedback}
+            </p>
+          )}
         </form>
       </section>
     </div>

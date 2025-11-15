@@ -602,6 +602,20 @@
   box-shadow: var(--shadow);
 }
 
+.form-status {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-status--success {
+  color: var(--accent);
+}
+
+.form-status--error {
+  color: #ff8e8e;
+}
+
 label {
   display: flex;
   flex-direction: column;

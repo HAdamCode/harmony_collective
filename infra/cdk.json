@@ -1,0 +1,11 @@
+{
+  "app": "npx ts-node --prefer-ts-exts bin/harmony-forms.ts",
+  "context": {
+    "recipientEmail": "hunter.j.adam@gmail.com",
+    "allowedOrigins": [
+      "http://localhost:5173",
+      "https://harmonycollective.org"
+    ]
+  }
+}
+

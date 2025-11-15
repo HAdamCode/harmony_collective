@@ -1,7 +1,38 @@
+import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import { groups } from '../data/groups'
+import { sendEmail } from '../utils/sendEmail'
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle')
+  const [feedback, setFeedback] = useState('')
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const payload = {
+      formName: 'contact',
+      name: formData.get('name') || '',
+      email: formData.get('email') || '',
+      message: formData.get('message') || '',
+    }
+
+    setStatus('submitting')
+    setFeedback('')
+
+    try {
+      await sendEmail(payload)
+      form.reset()
+      setStatus('success')
+      setFeedback('Thanks! We received your message and will be in touch soon.')
+    } catch (error) {
+      console.error(error)
+      setStatus('error')
+      setFeedback(error.message)
+    }
+  }
+
   return (
     <div className="page">
       <PageHero
@@ -16,13 +47,7 @@ export default function Contact() {
           <h2>General inquiries</h2>
           <p>We’ll get back to you as soon as we can.</p>
         </div>
-        <form
-          className="contact-form"
-          onSubmit={(event) => {
-            event.preventDefault()
-            alert('Thank you! We will be in touch shortly.')
-          }}
-        >
+        <form className="contact-form" onSubmit={handleSubmit}>
           <label>
             Name
             <input type="text" name="name" required placeholder="Your name" />
@@ -35,9 +60,19 @@ export default function Contact() {
             Message
             <textarea name="message" rows="4" placeholder="How can we help?" />
           </label>
-          <button className="btn btn--primary" type="submit">
-            Send Message
+          <button className="btn btn--primary" type="submit" disabled={status === 'submitting'}>
+            {status === 'submitting' ? 'Sending…' : 'Send Message'}
           </button>
+          {status === 'success' && (
+            <p className="form-status form-status--success" role="status" aria-live="polite">
+              {feedback}
+            </p>
+          )}
+          {status === 'error' && (
+            <p className="form-status form-status--error" role="status" aria-live="polite">
+              {feedback}
+            </p>
+          )}
         </form>
       </section>
 
