@@ -635,14 +635,25 @@ textarea {
 
 .social-list a {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social-list a svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .social-list a:hover {
   border-color: var(--accent);
+  color: var(--accent);
 }
 
 .contact-card {

@@ -126,11 +126,10 @@ export const groups = [
     auditionNote: 'Counterpoint is currently a fixed quartet and not replacing members.',
     socials: {
       instagram: 'https://instagram.com/counterpoint4tet',
-      facebook: 'https://facebook.com/counterpoint4tet',
-      youtube: 'https://www.youtube.com/results?search_query=counterpoint+quartet',
+      facebook: 'https://www.facebook.com/profile.php?id=61561243997263',
     },
     contactEmail: 'bookings@harmonycollective.org',
-    featuredVideo: 'https://www.youtube.com/embed/jhqyfrs3To0',
+    featuredVideo: 'https://www.youtube.com/embed/PtskxIfrooU?start=288',
     heroImage: counterpointHero,
     gallery: [
       counterpointHero,

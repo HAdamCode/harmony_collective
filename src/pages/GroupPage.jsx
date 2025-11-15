@@ -1,6 +1,38 @@
 import { Link, useParams } from 'react-router-dom'
 import { groups } from '../data/groups'
 
+const socialLabels = {
+  instagram: 'Instagram',
+  facebook: 'Facebook',
+  youtube: 'YouTube',
+}
+
+const socialIcons = {
+  instagram: (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="17" cy="7" r="1.2" fill="currentColor" />
+    </svg>
+  ),
+  facebook: (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M14.5 8.5h2.5V5h-2.9c-2.4 0-4.1 1.7-4.1 4.3V12H7v3h3v6h3v-6h2.7l0.6-3H13V9.7c0-.8.4-1.2 1.5-1.2Z"
+      />
+    </svg>
+  ),
+  youtube: (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M21.6 7.2c-.2-.9-.9-1.5-1.7-1.7C18.1 5.2 12 5.2 12 5.2s-6.1 0-7.9.3c-.9.2-1.5.8-1.7 1.7C2 9 2 12 2 12s0 3 .4 4.8c.2.9.9 1.5 1.7 1.7 1.8.3 7.9.3 7.9.3s6.1 0 7.9-.3c.9-.2 1.5-.8 1.7-1.7.4-1.8.4-4.8.4-4.8s0-3-.4-4.8ZM10 15.2V8.8l5.3 3.2Z"
+      />
+    </svg>
+  ),
+}
+
 export default function GroupPage() {
   const { slug } = useParams()
   const group = groups.find((item) => item.slug === slug)
@@ -48,13 +80,19 @@ export default function GroupPage() {
           </div>
           {group.socials && (
             <ul className="social-list">
-              {Object.entries(group.socials).map(([network, url]) => (
-                <li key={network}>
-                  <a href={url} target="_blank" rel="noreferrer">
-                    {network}
-                  </a>
-                </li>
-              ))}
+              {Object.entries(group.socials).map(([network, url]) => {
+                const key = network.toLowerCase()
+                const icon = socialIcons[key]
+                const label = socialLabels[key] || network
+                return (
+                  <li key={network}>
+                    <a href={url} target="_blank" rel="noreferrer">
+                      {icon}
+                      <span>{label}</span>
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           )}
         </div>
