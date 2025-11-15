@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import { upcomingEvents } from '../data/events'
 import { groups } from '../data/groups'
+import heroBanner from '../assets/images/highlyte/banner.JPG'
 
 const impactPoints = [
   'Five ensembles rooted in communities across the Front Range',
@@ -16,7 +17,7 @@ export default function Home() {
         eyebrow="Denver · Littleton · Golden"
         title="Harmony. Community. Acapella."
         subtitle="Harmony Collective is a modern home for vocal ensembles, community partners, donors, and neighbors who believe in the power of shared sound."
-        backgroundImage="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={heroBanner}
       >
         <div className="hero-actions">
           <Link className="btn btn--primary" to="/book-us">
