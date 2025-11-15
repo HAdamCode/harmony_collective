@@ -66,11 +66,10 @@ export const groups = [
     auditionNote: 'Verse is a competitive quartet and is not auditioning new members.',
     socials: {
       instagram: 'https://instagram.com/versequartet',
-      facebook: 'https://facebook.com/versequartet',
-      youtube: 'https://www.youtube.com/results?search_query=verse+quartet',
+      facebook: 'https://www.facebook.com/profile.php?id=61576936911202',
     },
     contactEmail: 'bookings@harmonycollective.org',
-    featuredVideo: 'https://www.youtube.com/embed/cIxYbt1IdgY',
+    featuredVideo: 'https://www.youtube.com/embed/G6VdCiBoI8s?start=6',
     heroImage: verseHero,
     gallery: [verseHero, verseGallery1, verseGallery2, verseGallery3, verseGallery4, verseGallery5],
     palette: {
