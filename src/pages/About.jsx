@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero'
+import aboutBanner from '../assets/images/highlyte/about.JPG'
 
 const values = ['Community', 'Impact', 'Musical Excellence', 'Accessibility', 'Joy']
 
@@ -9,7 +10,7 @@ export default function About() {
         eyebrow="About the Collective"
         title="Harmony for people, not profit."
         subtitle="Harmony Collective uplifts community-focused acapella groups across Denver, Littleton, and Golden. We bring singers and audiences together through joyful, impactful music-making."
-        backgroundImage="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={aboutBanner}
       />
 
       <section className="section">
