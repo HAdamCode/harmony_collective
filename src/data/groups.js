@@ -11,12 +11,14 @@ import highlyteGallery3 from '../assets/images/highlyte/IMG_7003.jpg'
 import highlyteGallery4 from '../assets/images/highlyte/DSC04140.JPG'
 import highlyteGallery5 from '../assets/images/highlyte/DSC04173.JPG'
 import highlyteGallery6 from '../assets/images/highlyte/DSC04245.JPG'
-import counterpointHero from '../assets/images/counterpoint/6C54D227-E764-4BF6-B7F6-EEF059C4BCC0.jpeg'
-import counterpointGallery1 from '../assets/images/counterpoint/A3CF43F6-6F5B-4EF8-9311-5BF3F1278927.png'
-import counterpointGallery2 from '../assets/images/counterpoint/DSC02144.JPG'
-import counterpointGallery3 from '../assets/images/counterpoint/IMG_6405.jpg'
-import counterpointGallery4 from '../assets/images/counterpoint/20250502_164037.jpg'
-import counterpointGallery5 from '../assets/images/counterpoint/37952BA8-54D6-49FA-BB06-F883A8EB891F.jpeg'
+import counterpointHero from '../assets/images/counterpoint/C273D0A0-5DC5-4B55-A765-49643EE2DFEE.jpeg'
+import counterpointGallery1 from '../assets/images/counterpoint/6C54D227-E764-4BF6-B7F6-EEF059C4BCC0.jpeg'
+import counterpointGallery2 from '../assets/images/counterpoint/A3CF43F6-6F5B-4EF8-9311-5BF3F1278927.png'
+import counterpointGallery3 from '../assets/images/counterpoint/DSC02144.JPG'
+import counterpointGallery4 from '../assets/images/counterpoint/IMG_6405.jpg'
+import counterpointGallery5 from '../assets/images/counterpoint/20250502_164037.jpg'
+import counterpointGallery6 from '../assets/images/counterpoint/37952BA8-54D6-49FA-BB06-F883A8EB891F.jpeg'
+import counterpointGallery7 from '../assets/images/counterpoint/F28FEFCF-1A5A-48F4-B2C8-A1521AA109C3.jpeg'
 import outOfRangeHero from '../assets/images/outofrange/DSC02147.JPG'
 import outOfRangeGallery2 from '../assets/images/outofrange/DSC02150.JPG'
 import outOfRangeGallery3 from '../assets/images/outofrange/DSC02153.JPG'
@@ -137,6 +139,8 @@ export const groups = [
       counterpointGallery3,
       counterpointGallery4,
       counterpointGallery5,
+      counterpointGallery6,
+      counterpointGallery7,
     ],
     palette: {
       bg: '#021312',
