@@ -11,6 +11,8 @@ const impactPoints = [
 ]
 
 export default function Home() {
+  const highlyteGroup = groups.find((group) => group.slug === 'highlyte')
+
   return (
     <div className="page page--home">
       <PageHero
@@ -53,6 +55,11 @@ export default function Home() {
         <div className="card-grid">
           {groups.map((group) => (
             <article className="card group-card" key={group.slug}>
+              {group.logo && (
+                <div className="group-card__logo">
+                  <img src={group.logo} alt={`${group.name} logo`} />
+                </div>
+              )}
               <div className="group-card__header">
                 <h3>{group.name}</h3>
                 <p>{group.type}</p>
@@ -158,9 +165,16 @@ export default function Home() {
       </section>
 
       <section className="section section--cta join-cta">
-        <div>
-          <h2>Join Highlyte</h2>
-          <p>All voice parts are welcome. Attend three rehearsals, receive feedback, and step into the chorus.</p>
+        <div className="join-cta__content">
+          {highlyteGroup?.logo && (
+            <div className="cta-logo">
+              <img src={highlyteGroup.logo} alt="Highlyte logo" />
+            </div>
+          )}
+          <div>
+            <h2>Join Highlyte</h2>
+            <p>All voice parts are welcome. Attend three rehearsals, receive feedback, and step into the chorus.</p>
+          </div>
         </div>
         <a className="btn btn--ghost" href="https://forms.gle/YmyRcVhWfwUniu728" target="_blank" rel="noreferrer">
           Audition for Highlyte

@@ -64,6 +64,11 @@ export default function GroupPage() {
     <div className="page group-page" style={themeVars}>
       <section className="group-hero" style={{ backgroundImage: `linear-gradient(${group.palette.overlay}, ${group.palette.overlay}), url(${group.heroImage})` }}>
         <div className="group-hero__content">
+          {group.logo && (
+            <div className="group-hero__logo">
+              <img src={group.logo} alt={`${group.name} logo`} />
+            </div>
+          )}
           <p className="eyebrow">
             {group.type} · {group.city}
           </p>

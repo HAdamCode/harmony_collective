@@ -1,10 +1,12 @@
 import verseHero from '../assets/images/verse/4461ADEF-3034-4F67-805B-5C7BD859C357.jpeg'
+import verseLogo from '../assets/images/logos/verse_full.PNG'
 import verseGallery1 from '../assets/images/verse/DSC01801.JPG'
 import verseGallery2 from '../assets/images/verse/IMG_3678.jpg'
 import verseGallery3 from '../assets/images/verse/IMG_3997.jpg'
 import verseGallery4 from '../assets/images/verse/IMG_8295.jpg'
 import verseGallery5 from '../assets/images/verse/IMG_8824.jpg'
 import highlyteHero from '../assets/images/highlyte/IMG_0098.JPG'
+import highlyteLogo from '../assets/images/logos/highlyte_full.png'
 import highlyteGallery1 from '../assets/images/highlyte/IMG_2295.jpg'
 import highlyteGallery2 from '../assets/images/highlyte/IMG_5618.jpg'
 import highlyteGallery3 from '../assets/images/highlyte/IMG_7003.jpg'
@@ -71,6 +73,7 @@ export const groups = [
     contactEmail: 'bookings@harmonycollective.org',
     featuredVideo: 'https://www.youtube.com/embed/G6VdCiBoI8s?start=6',
     heroImage: verseHero,
+    logo: verseLogo,
     gallery: [verseHero, verseGallery1, verseGallery2, verseGallery3, verseGallery4, verseGallery5],
     palette: {
       bg: '#0c0512',
@@ -190,12 +193,12 @@ export const groups = [
     auditionLink: 'https://forms.gle/YmyRcVhWfwUniu728',
     socials: {
       instagram: 'https://instagram.com/highlyte.vocals',
-      facebook: 'https://facebook.com/highlyte.vocals',
-      youtube: 'https://www.youtube.com/results?search_query=highlyte+chorus',
+      facebook: 'https://www.facebook.com/profile.php?id=61570654318691',
     },
     contactEmail: 'sing@highlytevoices.org',
     featuredVideo: 'https://www.youtube.com/embed/8ZcmTl_1ER8',
     heroImage: highlyteHero,
+    logo: highlyteLogo,
     gallery: [
       highlyteHero,
       highlyteGallery1,
