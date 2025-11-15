@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero'
 import { upcomingEvents } from '../data/events'
 import { pastEvents } from '../data/pastEvents'
+import performancesHero from '../assets/images/verse/performances.jpg'
 
 export default function Performances() {
   return (
@@ -9,7 +10,7 @@ export default function Performances() {
         eyebrow="Performances"
         title="Concerts, community events, and moments of shared music."
         subtitle="Our ensembles bring harmony to gatherings across Colorado through welcoming, meaningful performances."
-        backgroundImage="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={performancesHero}
       />
 
       <section className="section">

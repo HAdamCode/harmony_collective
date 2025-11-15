@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import PageHero from '../components/PageHero'
 import { groups } from '../data/groups'
+import bookHero from '../assets/images/book.JPG'
 
 const bookingSteps = [
   'Share a bit about your event: when it is, where it is, and the kind of atmosphere you want.',
@@ -23,7 +24,7 @@ export default function BookUs() {
         eyebrow="Booking"
         title="Bring Harmony Collective to your stage."
         subtitle="Concerts, residencies, conferences, brand launches, festivals, and donor events—we tailor vocal experiences to your goals."
-        backgroundImage="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={bookHero}
       />
 
       <section className="section">

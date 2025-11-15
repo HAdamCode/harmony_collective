@@ -1,8 +1,23 @@
 import verseHero from '../assets/images/verse/4461ADEF-3034-4F67-805B-5C7BD859C357.jpeg'
+import verseGallery1 from '../assets/images/verse/DSC01801.JPG'
+import verseGallery2 from '../assets/images/verse/IMG_3678.jpg'
+import verseGallery3 from '../assets/images/verse/IMG_3997.jpg'
+import verseGallery4 from '../assets/images/verse/IMG_8295.jpg'
+import verseGallery5 from '../assets/images/verse/IMG_8824.jpg'
 import highlyteHero from '../assets/images/highlyte/IMG_0098.JPG'
 import highlyteGallery1 from '../assets/images/highlyte/IMG_2295.jpg'
 import highlyteGallery2 from '../assets/images/highlyte/IMG_5618.jpg'
 import highlyteGallery3 from '../assets/images/highlyte/IMG_7003.jpg'
+import highlyteGallery4 from '../assets/images/highlyte/DSC04140.JPG'
+import highlyteGallery5 from '../assets/images/highlyte/DSC04173.JPG'
+import highlyteGallery6 from '../assets/images/highlyte/DSC04245.JPG'
+import counterpointHero from '../assets/images/counterpoint/DSC02144.JPG'
+import counterpointGallery1 from '../assets/images/counterpoint/IMG_6405.jpg'
+import counterpointGallery2 from '../assets/images/counterpoint/20250502_164037.jpg'
+import outOfRangeHero from '../assets/images/outofrange/DSC02147.JPG'
+import outOfRangeGallery2 from '../assets/images/outofrange/DSC02150.JPG'
+import outOfRangeGallery3 from '../assets/images/outofrange/DSC02153.JPG'
+import goldenRatioHero from '../assets/images/goldenratio/DSC01846.JPG'
 
 export const groups = [
   {
@@ -52,11 +67,7 @@ export const groups = [
     contactEmail: 'bookings@harmonycollective.org',
     featuredVideo: 'https://www.youtube.com/embed/cIxYbt1IdgY',
     heroImage: verseHero,
-    gallery: [
-      verseHero,
-      'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-    ],
+    gallery: [verseHero, verseGallery1, verseGallery2, verseGallery3, verseGallery4, verseGallery5],
     palette: {
       bg: '#0c0512',
       card: '#16071f',
@@ -115,12 +126,8 @@ export const groups = [
     },
     contactEmail: 'bookings@harmonycollective.org',
     featuredVideo: 'https://www.youtube.com/embed/jhqyfrs3To0',
-    heroImage: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
-    ],
+    heroImage: counterpointHero,
+    gallery: [counterpointHero, counterpointGallery1, counterpointGallery2],
     palette: {
       bg: '#021312',
       card: '#062322',
@@ -177,7 +184,15 @@ export const groups = [
     contactEmail: 'sing@highlytevoices.org',
     featuredVideo: 'https://www.youtube.com/embed/8ZcmTl_1ER8',
     heroImage: highlyteHero,
-    gallery: [highlyteHero, highlyteGallery1, highlyteGallery2, highlyteGallery3],
+    gallery: [
+      highlyteHero,
+      highlyteGallery1,
+      highlyteGallery2,
+      highlyteGallery3,
+      highlyteGallery4,
+      highlyteGallery5,
+      highlyteGallery6,
+    ],
     palette: {
       bg: '#050505',
       card: '#0d0d0f',
@@ -228,12 +243,8 @@ export const groups = [
     socials: {},
     contactEmail: 'bookings@harmonycollective.org',
     featuredVideo: 'https://www.youtube.com/embed/lp-EO5I60KA',
-    heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80',
-    ],
+    heroImage: outOfRangeHero,
+    gallery: [outOfRangeHero, outOfRangeGallery2, outOfRangeGallery3],
     palette: {
       bg: '#1b050d',
       card: '#260712',
@@ -284,12 +295,8 @@ export const groups = [
     socials: {},
     contactEmail: 'bookings@harmonycollective.org',
     featuredVideo: 'https://www.youtube.com/embed/1gCulUDvALM',
-    heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80',
-    ],
+    heroImage: goldenRatioHero,
+    gallery: [goldenRatioHero],
     palette: {
       bg: '#0f0a03',
       card: '#1b1307',

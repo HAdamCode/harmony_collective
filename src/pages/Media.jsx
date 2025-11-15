@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero'
 import { collectiveGallery, groupSpotlights } from '../data/media'
 import { groups } from '../data/groups'
+import mediaHero from '../assets/images/piano.JPG'
 
 export default function Media() {
   return (
@@ -9,7 +10,7 @@ export default function Media() {
         eyebrow="Media"
         title="Photos and videos from our concerts, community events, and performances."
         subtitle="Explore highlights from across the Collective or browse media by group."
-        backgroundImage="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={mediaHero}
       />
 
       <section className="section">

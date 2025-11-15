@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero'
 import { groups } from '../data/groups'
+import donateHero from '../assets/images/donate.JPG'
 
 const impactAreas = [
   {
@@ -37,7 +38,7 @@ export default function Donate() {
         eyebrow="Donate"
         title="Fuel warm, community-first music."
         subtitle="Your gift helps cover rehearsal spaces, purchase music, support equipment needs, and make performances and competitions possible for our groups."
-        backgroundImage="https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={donateHero}
       />
 
       <section className="section">

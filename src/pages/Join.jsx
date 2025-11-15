@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero'
+import joinHero from '../assets/images/highlyte/DSC04280.JPG'
 
 const auditionSteps = [
   'Attend three rehearsals (ideally consecutive).',
@@ -13,7 +14,7 @@ export default function Join() {
         eyebrow="Join Highlyte"
         title="Singers welcome. Heart required."
         subtitle="Quartets are currently closed to auditions, but Highlyte—our community chorus in Littleton—auditions new members year-round."
-        backgroundImage="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={joinHero}
       />
 
       <section className="section">
