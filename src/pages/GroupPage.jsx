@@ -131,8 +131,19 @@ export default function GroupPage() {
           <h2>Gallery</h2>
         </div>
         <div className="gallery-grid">
-          {group.gallery.map((image) => (
-            <div className="gallery-grid__item" key={image} style={{ backgroundImage: `url(${image})` }} />
+          {group.gallery.map((image, index) => (
+            <a
+              className="gallery-grid__item"
+              key={image}
+              href={image}
+              target="_blank"
+              rel="noreferrer"
+              style={{ backgroundImage: `url(${image})` }}
+            >
+              <span className="sr-only">
+                Open {group.name} photo {index + 1} in a new tab
+              </span>
+            </a>
           ))}
         </div>
       </section>
