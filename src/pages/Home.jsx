@@ -38,6 +38,7 @@ export default function Home() {
             Harmony Collective supports community-focused acapella groups across Colorado. We believe in creating spaces
             where people can sing, connect, and share music that feels genuine and welcoming.
           </p>
+          <p className="intro-card__lead">What that looks like right now:</p>
           <ul>
             {impactPoints.map((point) => (
               <li key={point}>{point}</li>

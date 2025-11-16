@@ -290,6 +290,15 @@
   border: 1px solid var(--border);
 }
 
+.intro-card__lead {
+  margin: 1.25rem 0 0.5rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
 .group-card {
   display: flex;
   flex-direction: column;
