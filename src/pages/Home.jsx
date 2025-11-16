@@ -84,6 +84,13 @@ export default function Home() {
           {upcomingEvents.map((event) => {
             const locationQuery = encodeURIComponent(`${event.location} ${event.city}`)
             const locationHref = `https://www.google.com/maps?q=${locationQuery}`
+            const locationParts = event.location.split(',').map((part) => part.trim()).filter(Boolean)
+            const includesCityInLocation =
+              event.city && event.location.toLowerCase().includes(event.city.toLowerCase())
+            const displayParts = [...locationParts]
+            if (event.city && !includesCityInLocation) {
+              displayParts.push(event.city)
+            }
             return (
               <article className="event-card" key={event.title}>
                 <div className="event-card__header">
@@ -95,7 +102,12 @@ export default function Home() {
                 <h3>{event.title}</h3>
                 <p className="event-card__location">
                   <a href={locationHref} target="_blank" rel="noreferrer">
-                    {event.location} · {event.city}
+                    {displayParts.map((part, index) => (
+                      <span key={`${part}-${index}`}>
+                        {part}
+                        {index < displayParts.length - 1 && <br />}
+                      </span>
+                    ))}
                   </a>
                 </p>
                 <p>{event.description}</p>
