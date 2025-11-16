@@ -33,8 +33,8 @@ export default function About() {
           <article className="card">
             <h3>What drives us</h3>
             <p>
-              The Collective is intentionally not profit-driven. Donations, booking fees, and sponsorships loop back into
-              rehearsal space, music purchases, touring scholarships, and education programs.
+              The Collective is intentionally not profit-driven. Community giving, booking fees, and sponsorships loop
+              back into rehearsal space, music purchases, touring scholarships, and education programs.
             </p>
           </article>
         </div>
