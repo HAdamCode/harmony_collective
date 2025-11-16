@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { groups } from '../data/groups'
+import { formatYouTubeEmbed } from '../utils/media'
 
 const socialLabels = {
   instagram: 'Instagram',
@@ -161,7 +162,7 @@ export default function GroupPage() {
         <div className="video-embed">
           <iframe
             title={`${group.name} highlight video`}
-            src={group.featuredVideo}
+            src={formatYouTubeEmbed(group.featuredVideo)}
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

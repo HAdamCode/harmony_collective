@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero'
 import { collectiveGallery, groupSpotlights } from '../data/media'
 import { groups } from '../data/groups'
 import mediaHero from '../assets/images/piano.JPG'
+import { formatYouTubeEmbed } from '../utils/media'
 
 export default function Media() {
   return (
@@ -45,7 +46,7 @@ export default function Media() {
                   <div className="video-embed video-embed--compact">
                     <iframe
                       title={`${spotlight.name} video`}
-                      src={spotlight.video}
+                      src={formatYouTubeEmbed(spotlight.video)}
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen

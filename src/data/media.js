@@ -87,7 +87,7 @@ export const groupSpotlights = [
     name: 'Out of Range',
     blurb: 'A newly formed quartet with fresh energy, strong blend, and a growing presence in the barbershop contest scene.',
     image: outOfRangeHero,
-    video: 'https://www.youtube.com/embed/lp-EO5I60KA',
+    video: 'https://www.youtube.com/embed/4WyziviyIWg',
     gallery: [outOfRangeHero, outOfRangeGallery2, outOfRangeGallery3],
   },
 ]

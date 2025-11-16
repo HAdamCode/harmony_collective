@@ -255,7 +255,7 @@ export const groups = [
     auditionStatus: 'Closed to auditions',
     auditionNote: 'Out of Range is focused on contest preparation with the founding members.',
     socials: {},
-    featuredVideo: 'https://www.youtube.com/embed/lp-EO5I60KA',
+    featuredVideo: 'https://www.youtube.com/embed/4WyziviyIWg',
     heroImage: outOfRangeHero,
     gallery: [outOfRangeHero, outOfRangeGallery2, outOfRangeGallery3],
     palette: {
