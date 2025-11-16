@@ -51,7 +51,7 @@ export default function About() {
               <h3>{value}</h3>
               <p>
                 {value === 'Community' &&
-                  'Neighbors, students, donors, and artists all feel welcomed the moment they walk into a rehearsal.'}
+                  'Neighbors, students, supporters, and artists all feel welcomed the moment they walk into a rehearsal.'}
                 {value === 'Impact' && 'Programs emphasize measurable benefits—scholarships, outreach, and shared stages.'}
                 {value === 'Musical Excellence' &&
                   'Directors, clinicians, and arrangers invest in professional-level artistry for every group.'}

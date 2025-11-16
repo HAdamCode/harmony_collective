@@ -59,7 +59,7 @@ export default function BookUs() {
       <PageHero
         eyebrow="Booking"
         title="Bring Harmony Collective to your stage."
-        subtitle="Concerts, residencies, conferences, brand launches, festivals, and donor events—we tailor vocal experiences to your goals."
+        subtitle="Concerts, residencies, conferences, brand launches, festivals, and community gatherings—we tailor vocal experiences to your goals."
         backgroundImage={bookHero}
       />
 

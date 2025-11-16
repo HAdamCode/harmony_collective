@@ -18,7 +18,7 @@ export default function Home() {
       <PageHero
         eyebrow="Denver · Littleton · Golden"
         title="Harmony. Community. Acapella."
-        subtitle="Harmony Collective is a modern home for vocal ensembles, community partners, donors, and neighbors who believe in the power of shared sound."
+        subtitle="Harmony Collective is a modern home for vocal ensembles, community partners, neighbors, and anyone who believes in the power of shared sound."
         backgroundImage={heroBanner}
       >
         <div className="hero-actions">
@@ -126,8 +126,8 @@ export default function Home() {
           <h2>We exist to bring people together through acapella.</h2>
           <p>
             Our groups create spaces where singers connect, audiences feel welcomed, and communities experience the joy of
-            shared music. Donor support helps us keep rehearsals accessible, purchase music, and bring performances to local
-            events and organizations.
+            shared music. Community support helps us keep rehearsals accessible, purchase music, and bring performances to
+            local events and organizations.
           </p>
         </div>
         <div className="mission-grid">
