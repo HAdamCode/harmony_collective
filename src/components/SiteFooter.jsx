@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { primaryNav } from '../data/navigation'
+import harmonyLogo from '../assets/images/logos/harmony_collective_full.png'
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear()
@@ -11,9 +12,16 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__grid">
         <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Harmony. Community. Acapella.</h2>
-          <p>Call <a href="tel:+17193221809">(719) 322-1809</a></p>
+          <div className="footer-brand">
+            <img className="footer-logo" src={harmonyLogo} alt="Harmony Collective logo" />
+            <div>
+              <p className="eyebrow">Contact</p>
+              <h2>Harmony. Community. Acapella.</h2>
+            </div>
+          </div>
+          <p>
+            Call <a href="tel:+17193221809">(719) 322-1809</a>
+          </p>
           <p>Denver · Littleton · Golden, Colorado</p>
         </div>
 

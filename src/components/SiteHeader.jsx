@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { primaryNav } from '../data/navigation'
+import harmonyLogo from '../assets/images/logos/harmony_collective_full.png'
 
 export default function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +18,8 @@ export default function SiteHeader() {
       </a>
       <div className="site-header__inner">
         <NavLink className="site-logo" to="/">
-          Harmony Collective
+          <img className="site-logo__mark" src={harmonyLogo} alt="Harmony Collective logo" />
+          <span>Harmony Collective</span>
         </NavLink>
 
         <button
