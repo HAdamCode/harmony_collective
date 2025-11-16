@@ -46,7 +46,7 @@ export const groups = [
     achievements: [
       '2025 BHS International Quartet Contest — 28th place',
       '2025 Rocky Mountain District Champions',
-      'Marco Gonzalez Audience Award',
+      '2025 Marco Gonzalez Audience Award',
       '2024 BHS Next Gen — 12th place',
     ],
     services: [
