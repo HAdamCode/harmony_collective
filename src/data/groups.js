@@ -130,7 +130,7 @@ export const groups = [
       instagram: 'https://instagram.com/counterpoint4tet',
       facebook: 'https://www.facebook.com/profile.php?id=61561243997263',
     },
-    featuredVideo: 'https://www.youtube.com/embed/PtskxIfrooU?start=288',
+    featuredVideo: 'https://www.youtube.com/embed/t6O0xSyA72A?start=297',
     heroImage: counterpointHero,
     gallery: [
       counterpointHero,

@@ -71,7 +71,7 @@ export const groupSpotlights = [
     name: 'Counterpoint',
     blurb: 'A lively barbershop quartet known for expressive singing, personality, and a natural sense of fun on stage.',
     image: counterpointHero,
-    video: 'https://www.youtube.com/embed/PtskxIfrooU?start=288',
+    video: 'https://www.youtube.com/embed/t6O0xSyA72A?start=297',
     gallery: [counterpointHero, counterpointGallery1, counterpointGallery3, counterpointGallery4],
   },
   {
