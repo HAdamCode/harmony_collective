@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PageHero from '../components/PageHero'
 import { groups } from '../data/groups'
 import { sendEmail } from '../utils/sendEmail'
+import contactHero from '../assets/images/contact.JPG'
 
 export default function Contact() {
   const [status, setStatus] = useState('idle')
@@ -39,7 +40,7 @@ export default function Contact() {
         eyebrow="Contact"
         title="We’d love to hear from you."
         subtitle="Send a message to the Harmony Collective team or connect with an ensemble below."
-        backgroundImage="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={contactHero}
       />
 
       <section className="section">

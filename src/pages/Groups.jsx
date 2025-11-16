@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import { groups } from '../data/groups'
+import groupsHero from '../assets/images/groups.JPG'
 
 export default function Groups() {
   return (
@@ -9,7 +10,7 @@ export default function Groups() {
         eyebrow="Groups"
         title="From award-winning quartets to our community chorus, each Harmony Collective group brings its own style and energy."
         subtitle="Explore our quartets and learn about Highlyte, a chorus that continues to grow through an open, welcoming audition process."
-        backgroundImage="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage={groupsHero}
       />
 
       <section className="section">
