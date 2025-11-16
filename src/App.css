@@ -720,10 +720,32 @@ textarea {
 
 .values-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.value-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 220px;
+  max-width: 320px;
+}
+
+@media (max-width: 900px) {
+  .value-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .value-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 .payment-options {
