@@ -22,7 +22,6 @@ export default function Groups() {
                 to={`/groups/${group.slug}`}
                 style={{ backgroundImage: `linear-gradient(rgba(5,6,12,0.25), rgba(5,6,12,0.45)), url(${group.heroImage})` }}
               >
-                <span className="group-overview-card__label">{group.name}</span>
                 <span className="sr-only">View {group.name}</span>
               </Link>
               <div className="group-overview-card__body">

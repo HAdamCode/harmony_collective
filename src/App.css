@@ -521,18 +521,6 @@
   margin: 0.25rem 0 0.75rem;
 }
 
-.group-overview-card__label {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  padding: 0.4rem 0.8rem;
-  background: rgba(5, 6, 12, 0.65);
-  border-radius: 999px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-}
-
 .group-overview-card__title a {
   color: var(--text);
   text-decoration: none;
