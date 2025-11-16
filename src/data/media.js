@@ -20,7 +20,7 @@ export const collectiveGallery = [
   {
     image: highlyteGallery3,
     alt: 'Highlyte chorus layered in golden light',
-    caption: 'HighLyte rehearses weekly in Littleton, building connection through shared singing.',
+    caption: 'Highlyte rehearses weekly in Littleton, building connection through shared singing.',
   },
   {
     image: verseHero,
@@ -35,7 +35,7 @@ export const collectiveGallery = [
   {
     image: highlyteGallery5,
     alt: 'Highlyte soloist leading the chorus',
-    caption: 'Community events like Highlyte NightLyfe bring singers and neighbors together.',
+    caption: 'Community events like Highlyte Nightlyfe bring singers and neighbors together.',
   },
   {
     image: outOfRangeGallery2,

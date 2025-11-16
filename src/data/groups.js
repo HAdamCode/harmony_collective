@@ -164,10 +164,10 @@ export const groups = [
     longDescription:
       'Highlyte is a growing community chorus based in Littleton, built on connection, shared singing, and welcoming energy. Formed in January 2025 and led by director Jaden Nguyen, the ensemble brings people together through weekly rehearsals and meaningful local performances.',
     extendedDescription:
-      'Highlyte has quickly become part of the community through events like Highlyte NightLyfe, performances for organizations such as Bridging Hope, and their annual holiday concert featuring guest artists from across the Collective.',
+      'Highlyte has quickly become part of the community through events like Highlyte Nightlyfe, performances for organizations such as Bridging Hope, and their annual holiday concert featuring guest artists from across the Collective.',
     members: [],
     achievements: [
-      'Hosted the inaugural Highlyte NightLyfe community concert',
+      'Hosted the inaugural Highlyte Nightlyfe community concert',
       'Performed for Bridging Hope',
       'Holiday collaboration with Verse (2025)',
     ],

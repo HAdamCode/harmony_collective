@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     slug: 'highlyte-nightlyfe-recap',
-    title: 'Community Wrapped: Highlights from Highlyte NightLyfe',
+    title: 'Community Wrapped: Highlights from Highlyte Nightlyfe',
     author: 'Jaden Nguyen',
     date: 'January 12, 2026',
     category: 'Event Recap',
@@ -9,7 +9,7 @@ export const blogPosts = [
     excerpt:
       'Neighbors, singers, and partners filled a converted warehouse to experience an immersive evening of light, loops, and collective vocals.',
     content: [
-      'NightLyfe was built as a choose-your-own-adventure concert. Guests explored projection pods, a tea bar, and open rehearsals all happening simultaneously.',
+      'Nightlyfe was built as a choose-your-own-adventure concert. Guests explored projection pods, a tea bar, and open rehearsals all happening simultaneously.',
       'Highlyte debuted two new arrangements, paired a spoken-word artist with the chorus, and ended the night with a 150-person tag that echoed long after load-out.',
       'Funds raised from the event covered scholarships for new members and purchased community microphones for outreach shows.',
     ],

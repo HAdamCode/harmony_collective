@@ -1,6 +1,6 @@
 export const pastEvents = [
   {
-    title: 'Highlyte NightLyfe',
+    title: 'Highlyte Nightlyfe',
     date: 'Summer 2025',
     location: 'Littleton',
     description:
