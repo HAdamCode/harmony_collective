@@ -34,7 +34,7 @@ export default function About() {
             <h3>What drives us</h3>
             <p>
               The Collective is intentionally not profit-driven. Community giving, booking fees, and sponsorships loop
-              back into rehearsal space, music purchases, touring scholarships, and education programs.
+              back into rehearsal space and music purchases.
             </p>
           </article>
         </div>
