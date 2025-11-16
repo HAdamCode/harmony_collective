@@ -66,7 +66,7 @@ export default function Donate() {
         </div>
         <ul className="impact-list">
           {impactAreas.map((area) => (
-            <li key={area.title} className="card">
+            <li key={area.title} className="card impact-card">
               <h3>{area.title}</h3>
               <p>{area.copy}</p>
             </li>
