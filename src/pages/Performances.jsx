@@ -18,26 +18,32 @@ export default function Performances() {
           <p>Come hear our ensembles live and be part of the music.</p>
         </div>
         <div className="events-list">
-          {upcomingEvents.map((event) => (
-            <article className="event-card" key={event.title}>
-              <div className="event-card__header">
-                <p className="event-card__date">
-                  {event.date} · {event.time}
+          {upcomingEvents.map((event) => {
+            const locationQuery = encodeURIComponent(`${event.location} ${event.city}`)
+            const locationHref = `https://www.google.com/maps?q=${locationQuery}`
+            return (
+              <article className="event-card" key={event.title}>
+                <div className="event-card__header">
+                  <p className="event-card__date">
+                    {event.date} · {event.time}
+                  </p>
+                  <span className="event-card__group">{event.group}</span>
+                </div>
+                <h3>{event.title}</h3>
+                <p className="event-card__location">
+                  <a href={locationHref} target="_blank" rel="noreferrer">
+                    {event.location} · {event.city}
+                  </a>
                 </p>
-                <span className="event-card__group">{event.group}</span>
-              </div>
-              <h3>{event.title}</h3>
-              <p className="event-card__location">
-                {event.location} · {event.city}
-              </p>
-              <p>{event.description}</p>
-              {event.link && (
-                <a className="btn btn--ghost btn--small" href={event.link}>
-                  RSVP
-                </a>
-              )}
-            </article>
-          ))}
+                <p>{event.description}</p>
+                {event.link && (
+                  <a className="btn btn--ghost btn--small" href={event.link}>
+                    RSVP
+                  </a>
+                )}
+              </article>
+            )
+          })}
         </div>
       </section>
 

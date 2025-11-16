@@ -379,6 +379,15 @@
   color: var(--muted);
 }
 
+.event-card__location a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.event-card__location a:hover {
+  color: var(--accent);
+}
+
 .video-embed {
   position: relative;
   padding-top: 56.25%;
