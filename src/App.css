@@ -751,10 +751,19 @@ textarea {
 }
 
 .footer-nav {
-  list-style: none;
   margin: 1rem 0 0;
   padding: 0;
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-nav__column {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   gap: 0.4rem;
 }
 

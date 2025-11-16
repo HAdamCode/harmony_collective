@@ -3,6 +3,9 @@ import { primaryNav } from '../data/navigation'
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear()
+  const navColumns = Array.from({ length: Math.ceil(primaryNav.length / 3) }, (_, columnIndex) =>
+    primaryNav.slice(columnIndex * 3, columnIndex * 3 + 3)
+  )
 
   return (
     <footer className="site-footer">
@@ -16,13 +19,17 @@ export default function SiteFooter() {
 
         <div>
           <p className="eyebrow">Navigation</p>
-          <ul className="footer-nav">
-            {primaryNav.map((item) => (
-              <li key={item.path}>
-                <Link to={item.path}>{item.label}</Link>
-              </li>
+          <div className="footer-nav">
+            {navColumns.map((column, columnIndex) => (
+              <ul className="footer-nav__column" key={`footer-column-${columnIndex}`}>
+                {column.map((item) => (
+                  <li key={item.path}>
+                    <Link to={item.path}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
             ))}
-          </ul>
+          </div>
         </div>
 
         <div>
