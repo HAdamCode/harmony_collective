@@ -40,8 +40,10 @@ export default function Media() {
               <article className="spotlight" key={spotlight.slug}>
                 <div className="spotlight__media" style={{ backgroundImage: `url(${spotlight.image})` }} />
                 <div className="spotlight__body">
-                  <p className="eyebrow">{group?.type}</p>
-                  <h3>{spotlight.name}</h3>
+                  <div className="spotlight__heading">
+                    <h3>{spotlight.name}</h3>
+                    <p className="eyebrow">{group?.type}</p>
+                  </div>
                   <p>{spotlight.blurb}</p>
                   <div className="video-embed video-embed--compact">
                     <iframe

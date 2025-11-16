@@ -895,6 +895,25 @@ textarea {
   gap: 1rem;
 }
 
+.spotlight__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.spotlight__heading h3,
+.spotlight__heading .eyebrow {
+  margin: 0;
+}
+
+.spotlight__heading .eyebrow {
+  text-align: right;
+  flex-shrink: 0;
+}
+
 .spotlight__media::after {
   content: '';
   position: absolute;
